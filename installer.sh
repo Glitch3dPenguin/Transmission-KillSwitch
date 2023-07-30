@@ -24,6 +24,7 @@ apt update && sudo apt upgrade
 apt install wget git
 
 #Install the Transmission Killswitch script
+echo -e "${YELLO}Fetching install files from github repo${NC}"
 git clone https://github.com/Glitch3dPenguin/Transmission-KillSwitch.git
 cd Transmission-KillSwitch 
 mv transmission-killswitch/ /etc/transmission-killswitch
@@ -43,13 +44,17 @@ ExecStart=/etc/transmission-killswitch/kill-switch.sh
 [Install]
 WantedBy=multi-user.target
 EOF
+echo -e "${GREEN}Killswitch service installed${NC}"
 
 #Allow scripts to be ran
+echo -e "${YELLOW}Allowing killswitch files to be ran with chmod${NC}"
 chmod +x /etc/systemd/system/killswitch.service
-chmod +x /etc/transmission-killswitch.sh
+chmod +x /etc/transmission-killswitch/transmission-killswitch.sh
 
 #Enabled the service for systemctl
+echo -e "${YELLO}Enabling the killswitch service${NC}"
 systemctl enable killswitch
+echo =r "${GREEN}Killswitch enabled but not started yet!${NC}"
 
 #Inform user of script configuration
 echo -e "${GREEN}Transmission-Killswitch fully installed!${NC}"
