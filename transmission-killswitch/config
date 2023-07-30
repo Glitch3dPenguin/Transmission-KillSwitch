@@ -1,3 +1,5 @@
 # CONFIG:
 discord_url="DISCORD WEBHOOK URL HERE"  # The webhook URL for the Discord channel you want alerts sent to
 predefined_ip="NON-VPN IP ADDRESS HERE"  # Replace with your actual public IP address
+
+echo -e "${YELLOW}CONFIG LOADED${NC}"

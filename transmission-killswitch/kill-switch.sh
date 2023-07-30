@@ -3,6 +3,8 @@
 #Import the config file
 #Configure the config file in the same folder
 source /etc/transmission-killswitch/killswitch.config
+echo If you do NOT see a config conformation then it was misconfigured. 
+pause 2
 
 # CODE: (Do not edit)
 while true; do
