@@ -9,3 +9,8 @@ This scrip will only work with OpenVPN configurations set to use a static IP add
 ## Discord Integration
 
 This script also has the ability to post messages to a Discord server in order to alert you if the script nees to kill Transmission. 
+
+## How To Use
+
+1) Make sure that you have OpenVPN & Transmission-daemon installed and running. 
+2) Make sure that OpenVPN is configured to not switch IP addresses. Any time it changes, you will need to make sure that kill-switch.sh is configured properly. 

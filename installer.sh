@@ -35,3 +35,7 @@ EOF
 
 #Enabled the service for systemctl
 sudo systemctl enable killswitch
+
+#Script completed 
+echo Done! 
+done

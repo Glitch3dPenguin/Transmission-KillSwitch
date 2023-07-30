@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# CONFIG:
-discord_url="DISCORD WEBHOOK URL HERE"  # The webhook URL for the Discord channel you want alerts sent to
-predefined_ip="NON-VPN IP ADDRESS HERE"  # Replace with your actual public IP address
+#Import the config file
+#Configure the config file in the same folder
+source /etc/transmission-killswitch/killswitch.config
 
 # CODE: (Do not edit)
 while true; do
