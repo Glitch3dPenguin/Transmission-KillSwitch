@@ -67,5 +67,6 @@ EOF
         echo "VPN Connection Stable"
     fi
 
+    echo Killswitch passsed IP checks. Sleeping for 5 seconds before next check. 
     sleep 5
 done
