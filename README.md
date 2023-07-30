@@ -1,19 +1,11 @@
 # transmission-daemon Kill Switch
 
-This is a fail safe script that will automatically kill transmission-daemon on a Ubuntu container if it detects that there is a problem with the OpenVPN service OR connection. 
+This is a fail safe script that will automatically kill transmission-daemon on a Ubuntu container if it detects that there is a problem with the OpenVPN service OR connection.
 
-I will need this for documentation later: 
+## OpenVPN Requirement
 
-```
-[Unit]
-Description=Manual Transmission Killswitch
-After=openvpn.service
+This scrip will only work with OpenVPN configurations set to use a static IP address. If your OpenVPN configuration frequently changes IP address, then it may not be idea for for. This script also does not have a configuration option for multiple IP addresses.... YET. 
 
-[Service]
-Type=simple
-ExecStartPre=/usr/bin/sleep 30
-ExecStart=/root/kill-switch.sh
+## Discord Integration
 
-[Install]
-WantedBy=multi-user.target
-```
+This script also has the ability to post messages to a Discord server in order to alert you if the script nees to kill Transmission. 
