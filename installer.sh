@@ -49,20 +49,19 @@ EOF
 echo -e "${GREEN}Killswitch service installed${NC}"
 
 #Allow scripts to be ran
-echo -e "${YELLOW}Allowing killswitch files to be ran with chmod${NC}"
-chmod +x /etc/systemd/system/killswitch.service
+echo -e "${YELLOW}Allowing killswitch to be ran with chmod${NC}"
 chmod +x /etc/transmission-killswitch/kill-switch.sh
 
 #Enabled the service for systemctl
 echo -e "${YELLO}Enabling the killswitch service${NC}"
 systemctl enable killswitch
-echo =r "${GREEN}Killswitch enabled but not started yet!${NC}"
+echo -e "${GREEN}Killswitch enabled but not started yet!${NC}"
 
 #Inform user of script configuration
 echo -e "${GREEN}Transmission-Killswitch fully installed!${NC}"
 echo -e "${YELLOW}Please edit /etc/transmission-killswitch/config before starting${NC}"
-echo -e "${GREEN}Once config has been edited, start with${NC}"
-echo -e "${GREEN}sudo service killswitch start${NC}"
+echo -e "${GREEN}Once config has been edited, start with:${NC}"
+echo -e "${RED}sudo service killswitch start${NC}"
 
 #Script completed 
 echo -e "${GREEN}Done!${NC}" 
