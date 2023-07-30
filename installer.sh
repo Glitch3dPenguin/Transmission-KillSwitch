@@ -12,12 +12,12 @@ set -o errexit
 
 #Check if script has been ran with sudo
 if [ "$EUID" -ne 0 ]; then
-  echo "${RED}This script must be run with sudo or as root.${NC}"
+  echo -e "${RED}This script must be run with sudo or as root.${NC}"
   exit 1
 fi
 
 #Let's start by making sure we are up to date
-echo "${YELLOW}Making sure system is up-to-date.${NC}"
+echo -e "${YELLOW}Making sure system is up-to-date.${NC}"
 apt update && sudo apt upgrade
 
 #make sure wget and git is installed 
@@ -29,7 +29,7 @@ cd Transmission-KillSwitch
 mv transmission-killswitch/ /etc/transmission-killswitch
 
 #Set up the auto run script
-echo "${GREEN}Installing Killswitch Service to /etc/systemd/system/killswitch.service${NC}"
+echo -e "${GREEN}Installing Killswitch Service to /etc/systemd/system/killswitch.service${NC}"
 cat <<EOF > /etc/systemd/system/killswitch.service
 [Unit]
 Description=Manual Transmission Killswitch
@@ -52,11 +52,11 @@ chmod +x /etc/transmission-killswitch.sh
 systemctl enable killswitch
 
 #Inform user of script configuration
-echo "${GREEN}Transmission-Killswitch fully installed!${NC}"
-echo "${YELLOW}Please edit /etc/transmission-killswitch/config before starting${NC}"
-echo "${GREEN}Once config has been edited, start with${NC}"
-echo "${GREEN}sudo service killswitch start${NC}"
+echo -e "${GREEN}Transmission-Killswitch fully installed!${NC}"
+echo -e "${YELLOW}Please edit /etc/transmission-killswitch/config before starting${NC}"
+echo -e "${GREEN}Once config has been edited, start with${NC}"
+echo -e "${GREEN}sudo service killswitch start${NC}"
 
 #Script completed 
-echo "${GREEN}Done!${NC}" 
+echo -e "${GREEN}Done!${NC}" 
 done
