@@ -14,7 +14,7 @@ sudo apt install wget
 #Install the Transmission Killswitch script
 mkdir /etc/TransmissionKillswitch
 cd /etc/TransmissionKillswitch/
-wget https://raw.githubusercontent.com/Glitch3dPenguin/Transmission-KillSwitch/main/kill-switch.sh 
+wget https://raw.githubusercontent.com/Glitch3dPenguin/Transmission-KillSwitch/main/transmission-killswitch/kill-switch.sh
 cd 
 
 #Set up the auto run script
