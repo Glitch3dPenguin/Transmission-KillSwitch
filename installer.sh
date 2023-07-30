@@ -64,4 +64,4 @@ echo -e "${GREEN}sudo service killswitch start${NC}"
 
 #Script completed 
 echo -e "${GREEN}Done!${NC}" 
-done
+exit 0
