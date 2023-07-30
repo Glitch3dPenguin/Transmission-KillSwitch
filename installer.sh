@@ -24,10 +24,12 @@ apt update && sudo apt upgrade
 apt install wget git
 
 #Install the Transmission Killswitch script
-echo -e "${YELLO}Fetching install files from github repo${NC}"
+echo -e "${YELLOW}Fetching install files from github repo${NC}"
 git clone https://github.com/Glitch3dPenguin/Transmission-KillSwitch.git
 cd Transmission-KillSwitch 
+echo -e "${GREEN}Repo fetched!${NC}"
 mv transmission-killswitch/ /etc/transmission-killswitch
+echo -e "${GREEN}Killswitch files installed!${NC}"
 
 #Set up the auto run script
 echo -e "${GREEN}Installing Killswitch Service to /etc/systemd/system/killswitch.service${NC}"
