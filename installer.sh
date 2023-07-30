@@ -49,7 +49,7 @@ echo -e "${GREEN}Killswitch service installed${NC}"
 #Allow scripts to be ran
 echo -e "${YELLOW}Allowing killswitch files to be ran with chmod${NC}"
 chmod +x /etc/systemd/system/killswitch.service
-chmod +x /etc/transmission-killswitch/transmission-killswitch.sh
+chmod +x /etc/transmission-killswitch/killswitch.sh
 
 #Enabled the service for systemctl
 echo -e "${YELLO}Enabling the killswitch service${NC}"
