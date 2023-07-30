@@ -16,4 +16,4 @@ This script also has the ability to post messages to a Discord server in order t
 2) Make sure that OpenVPN is configured to not switch IP addresses. Any time it changes, you will need to make sure that kill-switch.sh is configured properly.
 3) Once all the requirements are in place run the simple one-liner
   
-`wget https://raw.githubusercontent.com/Glitch3dPenguin/Transmission-KillSwitch/main/installer.sh && chmod +x installer.sh && sudo ./installer.sh`
+```wget https://raw.githubusercontent.com/Glitch3dPenguin/Transmission-KillSwitch/main/installer.sh && chmod +x installer.sh && sudo ./installer.sh```
