@@ -1,6 +1,6 @@
 # transmission-daemon Kill Switch
 
-This is a fail safe script that will automatically kill transmission-daemon on a Ubuntu container if it detects that there is a problem with the OpenVPN service OR connection.
+This is a fail safe script that will automatically kill transmission-daemon on a Ubuntu container if it detects that there is a problem with the OpenVPN service OR connection. This script is intended to run on only Debian and Ubuntu systems. It will not work on Alpine linux containers. 
 
 ## OpenVPN Requirement
 
