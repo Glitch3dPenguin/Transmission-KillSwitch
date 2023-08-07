@@ -53,7 +53,7 @@ echo -e "${YELLOW}Allowing killswitch to be ran with chmod${NC}"
 chmod +x /etc/transmission-killswitch/kill-switch.sh
 
 #Enabled the service for systemctl
-echo -e "${YELLO}Enabling the killswitch service${NC}"
+echo -e "${YELLOW}Enabling the killswitch service${NC}"
 systemctl enable killswitch
 echo -e "${GREEN}Killswitch enabled but not started yet!${NC}"
 
